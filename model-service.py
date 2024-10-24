@@ -8,15 +8,12 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 @app.route('/generate', methods=['POST'])
 def generate():
     prompt = request.json.get('prompt', '')
+    model = request.json.get('model', 'llama3.2:3b')  # Default to 'llama3.2:3b' if not provided
     
     data = {
-        "model": "llama3.2:1b",
+        "model": model,
         "prompt": prompt,
-        "stream": False,
-        "options": {
-            "temperature": 0.3,
-            "top_p": 1
-        }
+        "stream": False
     }
     
     response = requests.post(OLLAMA_URL, json=data)
