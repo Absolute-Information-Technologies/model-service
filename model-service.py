@@ -102,6 +102,95 @@ JSON Format:
     ]
 }}
 
+Example Resume Content:
+Name: Jane Doe
+Address: 1234 Elm St, Anytown USA
+Phone: (555) 123-4567
+Email: janedoe@example.com
+
+Objective:
+To secure a position as a software developer in a dynamic environment where I can apply my skills and contribute to the success of the team.
+
+Summary:
+Experienced software developer with over 8 years of experience in full-stack development. Skilz include Java, Python, React, Node.js, and SQL. Certified in Agile methodologies and Scrum.
+
+Experience:
+Software Developer | XYZ Corp | Jan 2015 - Present
+- Developed and maintained web applications using JavaScript, HTML/CSS.
+- Collaborated with cross-functional teams to deliver projects on time.
+- Managed databases using MySQL and PostgreSQL.
+
+Project Manager | ABC Inc. | July 2013 - Dec 2014
+- Led a team of developers in delivering successful projects.
+- Utilized Agile methodologies for project management.
+
+Skills:
+Java, Python, JavaScript, React, Node.js, SQL, MySQL, PostgreSQL, Git, Docker, AWS
+
+Certifications:
+Agile Certified Practitioner (ACP), Scrum Master Certification
+
+Education:
+Bachelor of Science in Computer Science | University of Anytown | Sep 2010 - May 2014
+- Graduated with a BSc in Computer Science.
+
+Social Media Profiles:
+LinkedIn: https://www.linkedin.com/in/janedoe/
+
+Hobbies:
+- Cricket
+
+Expected JSON Output:
+{{
+    "name": "Jane Doe",
+    "address": "1234 Elm St, Anytown USA",
+    "phone": "(555) 123-4567",
+    "email": "janedoe@example.com",
+    "summary/objective": "To secure a position as a software developer in a dynamic environment where I can apply my skills and contribute to the success of the team.",
+    "skills": ["Java", "Python", "JavaScript", "React", "Node.js", "SQL", "MySQL", "PostgreSQL", "Git", "Docker", "AWS"],
+    "certifications": ["Agile Certified Practitioner (ACP)", "Scrum Master Certification"],
+    "education": [
+        {{
+            "degree": "Bachelor of Science in Computer Science",
+            "institution": "University of Anytown",
+            "start_date": "Sep 2010",
+            "end_date": "May 2014",
+            "location": ""
+        }}
+    ],
+    "experience": [
+        {{
+            "role": "Software Developer",
+            "company": "XYZ Corp",
+            "start_date": "Jan 2015",
+            "end_date": "",
+            "location": "",
+            "responsibilities": ["Developed and maintained web applications using JavaScript, HTML/CSS.", "Collaborated with cross-functional teams to deliver projects on time.", "Managed databases using MySQL and PostgreSQL."]
+        }},
+        {{
+            "role": "Project Manager",
+            "company": "ABC Inc.",
+            "start_date": "July 2013",
+            "end_date": "Dec 2014",
+            "location": "",
+            "responsibilities": ["Led a team of developers in delivering successful projects.", "Utilized Agile methodologies for project management."]
+        }}
+    ],
+    "languages": ["English"],
+    "social_media": [
+        {{
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/janedoe/"
+        }}
+    ],
+    "undefined": [
+        {{
+            "section": "hobbies",
+            "body": ["Cricket"]
+        }}
+    ]
+}}
+
 Resume content:
 {resume_text}
 
